@@ -2,15 +2,33 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primera app ADSO</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi primera página</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Bienvenido jugador, Soy camilo y vengo a advertirte</h1>
-    <p>Este es mi primer proyecto en GitHub, pero no te confies, en cualquier momento puede haber....</p>
-    <button id="boton">Alerta Spam!</button>
-    <p id="mensaje"></p>
-    <script src="script.js"></script>
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-header">
+                      <p>
+                        <h5 class="card-title">Camilo Sanchez</h5>
+                      </p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Profesion: Analista, programador junior</p>
+                        <p class="card-text">Analista y programador junior en formación en Análisis y Desarrollo de Software (SENA). Tengo experiencia en levantamiento de requerimientos, casos de uso y modelado UML, aplicada en el diseño de un marketplace con múltiples roles de usuario. Soy metódico, autodidacta y busco mi primera oportunidad en un equipo de desarrollo o análisis donde aportar y crecer.</p>
+                        <button class="btn btn-primary" onclick="saludar()">Haz clic aquí</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
