@@ -1,34 +1,121 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mi primera página</title>
+    <meta name="description" content="Camilo Sanchez, analista y programador junior en formación en Análisis y Desarrollo de Software (SENA).">
+    <title>Camilo Sanchez | Analista y Programador Junior</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <div class="container mt-4">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
+<body class="bg-black min-vh-100">
 
-                <div class="card text-white bg-dark mb-3">
-                    <div class="card-header">
-                      <p>
-                        <h5 class="card-title">Camilo Sanchez</h5>
-                      </p>
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+
+                <div class="card bg-dark text-white border-0 shadow-lg overflow-hidden">
+
+                    <div class="position-relative bg-primary bg-gradient py-5">
+                        <div class="position-absolute top-100 start-50 translate-middle w-25 ratio ratio-1x1">
+                            <div class="d-flex align-items-center justify-content-center rounded-circle bg-black text-white border border-4 border-primary shadow fs-2 fw-bold">
+                                CS
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <p class="card-text">Profesion: Analista, programador junior</p>
-                        <p class="card-text">Analista y programador junior en formación en Análisis y Desarrollo de Software (SENA). Tengo experiencia en levantamiento de requerimientos, casos de uso y modelado UML, aplicada en el diseño de un marketplace con múltiples roles de usuario. Soy metódico, autodidacta y busco mi primera oportunidad en un equipo de desarrollo o análisis donde aportar y crecer.</p>
-                        <button class="btn btn-primary" onclick="saludar()">Haz clic aquí</button>
+
+                    <div class="card-body text-center px-4 px-md-5 pt-5 pb-4">
+
+                        <div class="border border-2 border-primary rounded-3 bg-black px-3 py-3 mt-4 mb-4">
+                            <h1 class="h3 fw-bold mb-2">Camilo Sanchez</h1>
+                            <span class="badge rounded-pill text-bg-primary px-3 py-2">
+                                Analista · Programador Junior
+                            </span>
+                        </div>
+
+                        <p class="card-text text-light opacity-75 text-start">
+                            Analista y programador junior en formación en Análisis y Desarrollo de
+                            Software (SENA). Tengo experiencia en levantamiento de requerimientos,
+                            casos de uso y modelado UML, aplicada en el diseño de un marketplace con
+                            múltiples roles de usuario. Soy metódico, autodidacta y busco mi primera
+                            oportunidad en un equipo de desarrollo o análisis donde aportar y crecer.
+                        </p>
+
+                        <div class="d-flex flex-wrap justify-content-center gap-2 my-4">
+                            <span class="badge text-bg-secondary">Requerimientos</span>
+                            <span class="badge text-bg-secondary">Casos de uso</span>
+                            <span class="badge text-bg-secondary">UML</span>
+                            <span class="badge text-bg-secondary">Autodidacta</span>
+                            <span class="badge text-bg-secondary">Metódico</span>
+                        </div>
+
+                        <button class="btn btn-primary btn-lg px-5 rounded-pill" onclick="saludar()">
+                            Haz clic aquí
+                        </button>
+
+                        <div id="mensaje" class="alert alert-primary mt-4 mb-0 d-none" role="alert">
+                            ¡Hola! Gracias por visitar mi página.
+                        </div>
+
+                        <hr class="border-secondary my-5">
+                        <section class="text-start">
+                            <h2 class="h4 fw-bold mb-1">Formulario de contacto</h2>
+                            <p class="text-light opacity-75 mb-4">
+                                ¿Tienes una pregunta o una propuesta? Completa el siguiente formulario.
+                            </p>
+
+                            <form id="formularioContacto" novalidate>
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre completo</label>
+                                    <input type="text" id="nombre" name="nombre" class="form-control"
+                                        placeholder="Escribe tu nombre" autocomplete="name"
+                                        required minlength="3">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="correo" class="form-label">Correo electrónico</label>
+                                    <input type="email" id="correo" name="correo" class="form-control"
+                                        placeholder="ejemplo@correo.com" autocomplete="email" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="asunto" class="form-label">Asunto</label>
+                                    <select id="asunto" name="asunto" class="form-select" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="Consulta">Consulta</option>
+                                        <option value="Proyecto">Propuesta de proyecto</option>
+                                        <option value="Formacion">Formación</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="mensajeContacto" class="form-label">Mensaje</label>
+                                    <textarea id="mensajeContacto" name="mensaje" rows="5" class="form-control"
+                                        placeholder="Escribe tu mensaje..." required minlength="10"></textarea>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5 rounded-pill">
+                                        Enviar mensaje
+                                    </button>
+                                </div>
+
+                                <p id="respuestaFormulario"
+                                    class="respuesta-formulario"
+                                    role="status"
+                                    aria-live="polite"></p>
+                            </form>
+                        </section>
+                    </div>
+
+                    <div class="card-footer bg-black text-center text-secondary border-secondary-subtle small">
+                        &copy; 2026 Camilo Sanchez
                     </div>
                 </div>
 
             </div>
         </div>
-    </div>
-
-    <script src="js/script.js"></script>
+    </main>
 </body>
+<script src="JS/script.js"></script>
 </html>
